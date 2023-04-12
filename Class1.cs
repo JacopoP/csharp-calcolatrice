@@ -68,5 +68,26 @@ namespace csharp_calcolatrice
                 return a;
             return b;
         }
+        public static int Potenza(int baseP, int esp)
+        {
+            if (esp == 0)
+                return 1;
+            else if (baseP == 0)
+                return 0;
+            else if (esp > 0)
+            {
+                int risultato = baseP;
+                for(int i = 1; i < esp; i++)
+                    risultato *= baseP;
+                return risultato;
+            }
+            else
+            {
+                int risultato = 1;
+                for (int i = 1; i < esp; i++)
+                    risultato /= baseP;
+                return risultato;
+            }
+        }
     }
 }
