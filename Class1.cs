@@ -68,7 +68,7 @@ namespace csharp_calcolatrice
                 return a;
             return b;
         }
-        public static int Potenza(int baseP, int esp)
+        public static double Potenza(int baseP, int esp)
         {
             if (esp == 0)
                 return 1;
@@ -76,15 +76,15 @@ namespace csharp_calcolatrice
                 return 0;
             else if (esp > 0)
             {
-                int risultato = baseP;
+                double risultato = baseP;
                 for(int i = 1; i < esp; i++)
                     risultato *= baseP;
                 return risultato;
             }
             else
             {
-                int risultato = 1;
-                for (int i = 1; i < esp; i++)
+                double risultato = 1;
+                for (int i = 0; i < -esp; i++)
                     risultato /= baseP;
                 return risultato;
             }
